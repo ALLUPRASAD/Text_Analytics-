@@ -14,4 +14,9 @@ The encoding component is a stack of encoders (the paper stacks six of them on t
 All Encoders are identical in structure .Each encoder in broken in two layers 1. Feed forward Neural Network 2. Attention layer
 
    <img src="./docs_assets/t4.png" width="440" height="240"/> 
+   
+The input is given to the encoder self attention layer and output of self attention layer is fed to the feed forward neural network .The exact feed forward neural network is applied to each position(each word in sentence)
 
+The Decoder has both the encoder layers but it has encoder-decoder attention layer in between . which helps the decoder to focus on relevent parts of the input sentence  
+
+  <img src="./docs_assets/t5.png" width="440" height="240"/> 
