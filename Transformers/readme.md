@@ -28,4 +28,10 @@ After embeding words in squence(vector) each of them flows through each of the t
 
 One key property of the Transformer, which is that the word in each position flows through its own path in the encoder. There are dependencies between these paths in the self-attention layer. The feed-forward layer does not have those dependencies, however, and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
 
+As we’ve mentioned already, an encoder receives a list of vectors as input. It processes this list by passing these vectors into a ‘self-attention’ layer, then into a feed-forward neural network, then sends out the output upwards to the next encoder.
+
    <img src="./docs_assets/t6.png" width="440" height="240"/> 
+   
+   
+   
+  # Self-Attention
