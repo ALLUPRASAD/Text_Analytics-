@@ -45,3 +45,32 @@ When the model is processing the word “it”, self-attention allows it to asso
 
 As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
 
+The first step in calculating self-attention is to create three vectors from each of the encoder’s input vectors . So for each word, we create a 1.Query vector,2. a Key vector, 3. Value vector.
+What are the “query”, “key”, and “value” vectors?
+They’re abstractions that are useful for calculating and thinking about attention
+
+How to create self attention
+
+step-1:
+
+The first step in calculating self-attention is to create three vectors from each of the encoder’s input vectors (in this case, the embedding of each word). So for each word, we create a Query vector, a Key vector, and a Value vector. These vectors are created by multiplying the embedding by three matrices that we trained during the training process.
+
+Notice that these new vectors are smaller in dimension than the embedding vector. Their dimensionality is 64, while the embedding and encoder input/output vectors have dimensionality of 512. They don’t HAVE to be smaller, this is an architecture choice to make the computation of multiheaded attention (mostly) constant.
+
+  <img src="./docs_assets/t7.png" width="240" height="440"/> 
+
+step-2:
+
+The second step in calculating self-attention is to calculate a score. Say we’re calculating the self-attention for the first word in this example, “Thinking”. We need to score each word of the input sentence against this word. The score determines how much focus to place on other parts of the input sentence as we encode a word at a certain position.
+The score is calculated by taking the dot product of the query vector with the key vector of the respective word we’re scoring. So if we’re processing the self-attention for the word in position #1, the first score would be the dot product of q1 and k1. The second score would be the dot product of q1 and k2.
+
+step-3:
+
+ The 3rd step is  to divide the scores by 8 (the square root of the dimension of the key vectors used in the paper – 64. This leads to having more stable gradients. There could be other possible values here, but this is the default)
+ 
+
+step-4:
+
+ Fourth step then pass the result through a softmax operation. Softmax normalizes the scores so they’re all positive and add up to 1.
+ 
+  <img src="./docs_assets/t8.png" width="240" height="440"/> 
