@@ -23,3 +23,5 @@ The Decoder has both the encoder layers but it has encoder-decoder attention lay
 
 
 Each sentence as a input conveted in to vector for using word embedding algorithms and the given as list of vectors each of the size 512 inputs to the Attention layer of encoder .The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
+
+After embeding words in squence(vector) each of them flows through each of the two layers of the encoder.
