@@ -1,6 +1,6 @@
 ### Transformer A High-Level Look
  
-                       <img src="./docs_assets/t.png" width="240" height="240"/>   
+                       img src="./docs_assets/t.png" width="240" height="240"/
                        
 The transformer block contain encoding component, a decoding component as depicted below
 
