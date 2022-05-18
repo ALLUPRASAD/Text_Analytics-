@@ -35,3 +35,13 @@ As we’ve mentioned already, an encoder receives a list of vectors as input. It
    
    
   # Self-Attention
+  
+ Say the following sentence is an input sentence we want to translate:
+
+ ”The animal didn't cross the street because it was too tired”
+  
+What does “it” in this sentence refer to? Is it referring to the street or to the animal? It’s a simple question to a human, but not as simple to an algorithm.
+When the model is processing the word “it”, self-attention allows it to associate “it” with “animal”.
+
+As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
+
