@@ -57,7 +57,7 @@ The first step in calculating self-attention is to create three vectors from eac
 
 Notice that these new vectors are smaller in dimension than the embedding vector. Their dimensionality is 64, while the embedding and encoder input/output vectors have dimensionality of 512. They don’t HAVE to be smaller, this is an architecture choice to make the computation of multiheaded attention (mostly) constant.
 
-  <img src="./docs_assets/t7.png" width="240" height="340"/> 
+  <img src="./docs_assets/t7.png" width="140" height="340"/> 
 
 step-2:
 
@@ -73,4 +73,4 @@ step-4:
 
  Fourth step then pass the result through a softmax operation. Softmax normalizes the scores so they’re all positive and add up to 1.
  
-  <img src="./docs_assets/t8.png" width="240" height="340"/> 
+  <img src="./docs_assets/t8.png" width="140" height="340"/> 
