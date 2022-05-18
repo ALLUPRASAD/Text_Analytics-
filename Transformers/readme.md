@@ -73,4 +73,4 @@ step-4:
 
  Fourth step then pass the result through a softmax operation. Softmax normalizes the scores so they’re all positive and add up to 1.
  
-  <img src="./docs_assets/t8.png" width="440" height="240"/> 
+  <img src="./docs_assets/t8.png" width="400" height="200"/> 
