@@ -25,3 +25,7 @@ The Decoder has both the encoder layers but it has encoder-decoder attention lay
 Each sentence as a input conveted in to vector for using word embedding algorithms and the given as list of vectors each of the size 512 inputs to the Attention layer of encoder .The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
 
 After embeding words in squence(vector) each of them flows through each of the two layers of the encoder.
+
+One key property of the Transformer, which is that the word in each position flows through its own path in the encoder. There are dependencies between these paths in the self-attention layer. The feed-forward layer does not have those dependencies, however, and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
+
+   <img src="./docs_assets/t6.png" width="440" height="240"/> 
