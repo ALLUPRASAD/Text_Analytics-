@@ -20,3 +20,6 @@ The input is given to the encoder self attention layer and output of self attent
 The Decoder has both the encoder layers but it has encoder-decoder attention layer in between . which helps the decoder to focus on relevent parts of the input sentence  
 
   <img src="./docs_assets/t5.png" width="440" height="240"/> 
+
+
+Each sentence as a input conveted in to vector for using word embedding algorithms and the given as list of vectors each of the size 512 inputs to the Attention layer of encoder .The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
