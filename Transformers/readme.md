@@ -85,3 +85,7 @@ The fifth step is to multiply each value vector by the softmax score (in prepara
 step-6:
 
 The sixth step is to sum up the weighted value vectors. This produces the output of the self-attention layer at this position (for the first word).
+
+we represent all six setps in equation as 
+
+<img src="./docs_assets/t10.png" width="600" height="340"/>
