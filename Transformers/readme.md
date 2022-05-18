@@ -74,3 +74,14 @@ step-4:
  Fourth step then pass the result through a softmax operation. Softmax normalizes the scores so they’re all positive and add up to 1.
  
   <img src="./docs_assets/t8.png" width="600" height="340"/> 
+  
+  This softmax score determines how much each word will be expressed at this position. Clearly the word at this position will have the highest softmax score, but sometimes it’s useful to attend to another word that is relevant to the current word.
+
+step-5:
+
+The fifth step is to multiply each value vector by the softmax score (in preparation to sum them up). The intuition here is to keep intact the values of the word(s) we want to focus on, and drown-out irrelevant words (by multiplying them by tiny numbers like 0.001, for example).
+
+ <img src="./docs_assets/t9.png" width="800" height="440"/> 
+step-6:
+
+The sixth step is to sum up the weighted value vectors. This produces the output of the self-attention layer at this position (for the first word).
